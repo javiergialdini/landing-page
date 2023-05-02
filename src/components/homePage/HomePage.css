@@ -1,0 +1,48 @@
+.homePage{
+    height: 350px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .homePage {
+        height: 700px;
+    }
+}
+
+.textTitulo{
+    color: white;
+    font-family: Russo one;
+    font-size: 30px;
+    letter-spacing: 0.3rem;
+    padding-bottom: 1px;
+}
+@media (min-width: 768px) {
+    .textTitulo{
+        font-size: 50px;
+    }
+}
+@media (min-width: 1080px) {
+    .textTitulo{
+        font-size: 70px;
+    }
+}
+
+.textSubtitulo{
+    color: white;
+    font-family: Russo one;
+    font-size: 8px;
+    letter-spacing: 0.3rem;
+}
+@media (min-width: 768px) {
+    .textSubtitulo{
+        font-size: 16px;
+    }
+}
+@media (min-width: 1080px) {
+    .textSubtitulo{
+        font-size: 25px;
+    }
+}
