@@ -25,7 +25,7 @@ export const ResponsiveAppBar = () => {
     };
 
     return (
-        <AppBar position="static" className="Color">
+        <AppBar position="fixed" className="Color">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <p className="LogoName">[NOMADES]</p>

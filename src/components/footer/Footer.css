@@ -1,6 +1,6 @@
-.homePage{
-    height: 100vh;
-    background-color: rgb(40, 40, 40);
+.footer{
+    height: 50vh;
+    background-color: rgba(30, 30, 30);
     display: flex;
     text-align: center;
     align-items: center;
@@ -10,7 +10,7 @@
 .textTitulo{
     color: white;
     font-family: Russo one;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.3rem;
     padding-bottom: 1px;
 }
