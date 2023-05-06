@@ -11,24 +11,25 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import './NavBar.css'
 
-const pages = ['Productos', 'Pricing', 'Contacto', 'Nosotros'];
+const pages = ['Productos', 'Nosotros', 'Contacto'];
 
-export const ResponsiveAppBar = () => {
+export const ResponsiveAppBar = ({handleScrollTo}) => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
     };
 
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
+    const handleCloseNavMenu = (page) => {
+        //setAnchorElNav(null);
+        handleScrollTo(page)
     };
 
     return (
         <AppBar position="fixed" className="Color">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <p className="LogoName">[NOMADES]</p>
+                    <p onClick={() => handleScrollTo('HomePage')} className="LogoName">[NOMADAS]</p>
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -53,24 +54,24 @@ export const ResponsiveAppBar = () => {
                                 horizontal: 'left',
                             }}
                             open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{
-                                display: { xs: 'block', md: 'none' },
-                            }}
+                            className="custom-menu"
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                <MenuItem key={page} 
+                                onClick={() => handleCloseNavMenu(page)}
+                                >
+                                    <Typography
+                                    textAlign="center">{page}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-                    <p className="LogoNameShort">[NOMADES]</p>
+                    <p onClick={() => handleScrollTo('HomePage')} className="LogoNameShort">[NOMADAS]</p>
                     <Box sx={{ flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
-                                onClick={handleCloseNavMenu}
+                                onClick={() => handleScrollTo(page)}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
                                 {page}

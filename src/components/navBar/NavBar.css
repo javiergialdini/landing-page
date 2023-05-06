@@ -12,7 +12,13 @@
     letter-spacing: 0.1rem;
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
 }
+@media (max-width: 600px) {
+    .custom-menu {
+      display: block;
+    }
+  }
 
 @media (min-width: 768px) {
     .LogoName {
